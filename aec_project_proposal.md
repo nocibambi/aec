@@ -57,7 +57,7 @@ The Atlas data's differences from the United States public Comtrade database:
     - Distance ('distance'): "The extent of a location's existing capabilities to make the product" based on the products distance to current exports as measured by co-export probabilities.
     - Economic complexity index ('eci'): Country rank base on its export basket's diversification and complexity.
     - Opportunity gain ('oppgai'): How much a location could benefit by deveoping a particular product.
-    - Product complexity index ('pci'): "Ranks the diversity and sophistication of productio know-how required to produce a product" based on other number of countries producing that product and their economic complexity.
+    - Product complexity index ('pci'): "Ranks the diversity and sophistication of production know-how required to produce a product" based on other number of countries producing that product and their economic complexity.
     - Revealed comparative advantage ('rca'): Whether a country is an 'effective' exporter of a product (i.e. exports more than its 'fair share'). The bigger the value, the more important exporter the country is.
     - Country-Product connection ('mcp'): Marks whether the particular country export the specific product with an `rca` greater than 1. This also allows us to measure country diversity and product ubiquity.
 
@@ -79,6 +79,8 @@ The UN Comtrade data can be accessed most easier through quandl which provides e
 import quandl
 silk_canada = quandl.get("UCOM/SILK_CAN")
 ```
+Country and product type codes are behind the [following link](https://www.quandl.com/data/UCOM-United-Nations-Commodity-Trade/documentation/data-organization).
+
 
 Besides, the UN also provides a data API service based on the SDMX standard (https://comtrade.un.org/data/dev/portal).
 
@@ -89,9 +91,8 @@ The research group behind the Atlas published the cleaned data set only relative
 - Any company interested in the technological and infrastructural requirements of global expansion.
 - Production companies would like to gain an overview of their supply chains.
 - Financial investors interested in the growth possibilities and the interrelationship between production sectors and national economies.
-- HR specialists and educators trying to find out what skill might be needed in the future and/or from what sectors can people be retrained into areas where there is a shortage of skilled labor force.
+- HR specialists, educators or people acquiring new skills. The data can help them to find out what skill might be needed in the future and/or from what sectors can people be retrained into areas where there is a shortage of skilled labor force
 - Governmental and international institutions iterested in trade and economic policy.
 - Consultants providing services within the above domains.
-
 
 # Explain analysis and plots

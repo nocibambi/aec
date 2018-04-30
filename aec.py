@@ -9,3 +9,4 @@ import pandas as pd
 h2016 = pd.read_stata("H0_2016.dta")
 
 print(h0.info())
+h0.describe()
