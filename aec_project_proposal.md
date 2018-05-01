@@ -82,7 +82,7 @@ import quandl
 silk_canada = quandl.get("UCOM/SILK_CAN")
 ```
 * Country and product type codes are behind the [following link](https://www.quandl.com/data/UCOM-United-Nations-Commodity-Trade/documentation/data-organization).
-* Besides, the UN also provides a data API service based on the SDMX standard (https://comtrade.un.org/data/dev/portal).
+* Besides, the UN also provides its own data API service based on the SDMX standard (https://comtrade.un.org/data/dev/portal).
 
 ## Business value
 The research group behind the Atlas published the cleaned data set only relatively recently, and most of their publications so far has been about country-level economic development, and much less about direct business usability. Compared to contemporary unstructured data this set also benefits from its relatively broad geographic coverage and historical continuity.
@@ -105,6 +105,18 @@ Axes:
 * X: 'Product complexity index': An index showing the relative complexity of that particular product as based on the diversity of countries producing it and the ubiquity of countries these countries make. That is, products with high PCI are typically produced by only a few countries with a wide procuction line.
 * Y: 'Opportunity gain': The degree with which new opporunities emerge to more complex countries when producing that particular product.
 
-Accordingly, the graph can help users to see those product types which are easy to produce, not produced within the country but can lead to novel valuable skills and know-how.
+Accordingly, the graph can help users to see those product types which are
+1. easy to produce,
+2. not produced within the country and
+3. can lead to novel valuable skills and know-how.
 
 ## Plot2
+The graph shows the correlations between overal imports within a significatn product group.
+
+For, for this first we identified a product which
+1. belongs to the top 30 effective export products of the country (we continued to work with Indonesia) and
+2. had the highest opporunity gain value from among them.
+
+After that we accessed the UN Comtrade data API through Quandl, and downloaded all trade data related to that wider product group (in this case Plastics). Based on this we calculated correlations between product import values of the product group.
+
+The workflow and graph can help those who are interested in producing a particular product type with significant opporunity gain. For them it shows those products from the same product group, which are also imported into the same countries as the original. This can allow them to shift their production line gainfully while still staying at the same market.
