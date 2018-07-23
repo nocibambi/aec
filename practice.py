@@ -40,9 +40,9 @@ def chart():
     p.yaxis.axis_label = 'Opportunity Gain'
 
     script, div = components(p)
-    # plot_title = "The first plot generated from the data."
-    # plot_title=plot_title,
-    return render_template("chart.html", the_div=div, the_script=script) # Uses a template from the Jinja2 engine to output html
+    plot_title = "The first plot generated from the data."
+
+    return render_template("chart.html", plot_title=plot_title, the_div=div, the_script=script) # Uses a template from the Jinja2 engine to output html
 
 # Allow to run this application on the localhost in debug mode
 if __name__ == "__main__":
