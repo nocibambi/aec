@@ -6,11 +6,11 @@
         <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.css">
     </head>
 
-    <body>``
-        <h1>Plot: {{ plot_title }}</h1>
-        {{ the_div|safe }}
+    <body>
         <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
         <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.js"></script>
+        {{ the_div|safe }}
         {{ the_script|safe }}
+        {{ plot_title }}
     </body>
 </html>
