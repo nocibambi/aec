@@ -61,7 +61,7 @@ The Atlas data's differences from the United States public Comtrade database:
     - Product complexity index (`pci`): "Ranks the diversity and sophistication of production know-how required to produce a product" based on other number of countries producing that product and their economic complexity.
     - Revealed comparative advantage (`rca`): Whether a country is an 'effective' exporter of a product (i.e. exports more than its 'fair share`). The bigger the value, the more important exporter the country is.
     - Per capita export intensity (`rpop`): An alternative measure of export intensity. The ratio of exports per capita of a country-product over the exports per capita of that product in the world.
-    - Country-Product connection (`mcp`): Marks whether the particular country export the specific product with an `rca` greater than 1. This also allows us to measure country diversity and product ubiquity.
+    - Country-Product connection (`mcp`): Marks whether the particular country exports the specific product with an `rca` greater than 1 (i.e. it is an important importer). This also allows us to measure country diversity and product ubiquity.
 
 
 ### UN Comtrade
