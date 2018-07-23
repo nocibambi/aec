@@ -1,5 +1,5 @@
 gunicorn
 pandas
-bokeh
+bokeh==0.13.0
 flask
 Werkzeug==0.14.0
