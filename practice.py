@@ -83,11 +83,11 @@ def chart():
     p.yaxis.axis_label = 'Opportunity Gain'
 
     script, div = components(p)
-    plot_title = "The first plot generated fro the data."
+    plot_title = "The first plot generated from the data."
 
     return render_template("chart.html", plot_title=plot_title, the_div=div, the_script=script) # Uses a template from the Jinja2 engine to output html
 
 # Allow to run this application on the localhost in debug mode
 if __name__ == "__main__":
-    app.run(debug=True) # do not use debug mode outised testing
+    app.run(port=33507) # debug=True,  do not use debug mode outised testing
     # app(foo, p) # do not use debug mode outised testing
