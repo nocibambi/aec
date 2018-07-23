@@ -1,4 +1,5 @@
 gunicorn
+pandas
 bokeh
 flask
 Werkzeug==0.14.0
