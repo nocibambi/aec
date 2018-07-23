@@ -1,1 +1,1 @@
-web: gunicorn practice.py
+web: gunicorn practice:app
