@@ -44,4 +44,5 @@ p.scatter(x = 'pci',
 p.xaxis.axis_label = 'Product Complexity Index'
 p.yaxis.axis_label = 'Opportunity Gain'
 
-show(p)
+script, div = components(p)
+result = render_template("chart.html", the_div=div, the_script=script) # Uses a template from the Jinja2 engine to output html
