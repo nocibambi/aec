@@ -6,12 +6,30 @@
         <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.css">
     </head>
 
-    <body>
+    <body aligh=center>
+        <h1>{{ plot_title }}</h1>
+        <br>
+        The graph helps users to identify production opportunities within a country.
+
+        It shows the 30 least 'distant' but yet not produced products in a country (in this case, Indonesia). That is, starting to produce them would be relatively easy (in relation to the whole product universe), but nonetheless, the country is not an 'effective' exporter of them.
+
+        Axes:
+        <ul>
+            <li>X: 'Product complexity index': An index showing the relative complexity of that particular product as based on the diversity of countries producing it and the ubiquity of countries these countries make. That is, products with high PCI are typically produced by only a few countries with a wide product line.</li>
+            <li>Y: 'Opportunity gain': The degree with which new opportunities emerge to more complex countries when producing that particular product.</li>
+        </ul>
+
+        Accordingly, the graph can help users to see those product types which are
+        <ol>
+            <li>easy to produce,</li>
+            <li>not produced within the country and</li>
+            <li>can lead to novel valuable skills and know-how.</li>
+        </ol>
+        <br>
+        <br>
         <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
         <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.js"></script>
         {{ the_div|safe }}
         {{ the_script|safe }}
-        <br>
-        {{ plot_title }}
     </body>
 </html>

@@ -40,7 +40,7 @@ def chart():
     p.yaxis.axis_label = 'Opportunity Gain'
 
     script, div = components(p)
-    plot_title = "AEC: 'Product Complexity Index' and 'Opportunity Gain' for Indonesia, 2016."
+    plot_title = "AEC: 'Product Complexity Index' and 'Opportunity Gain' for Indonesia, 2016"
 
     return render_template("chart.html", plot_title=plot_title, the_div=div, the_script=script) # Uses a template from the Jinja2 engine to output html
 
