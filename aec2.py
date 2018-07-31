@@ -95,35 +95,40 @@ query = query.sort_values(by='distance').head(30)
 query
 
 ## Rendering the plot
-source = ColumnDataSource(data = dict(names = list(query.Description),
-                                      opg = query.oppgain,
-                                      pci = query.pci,
-                                      dist=query.distance))
+@app.route("/")
+def chart():
+    query = pd.read_csv("plot1_data.csv")
 
-hover = HoverTool(
-    tooltips=[
-        ("Desc", "@names"),
-        ("PCI", "$x"),
-        ("Oppgain", "$y"),
-        ("Distance", "@dist")
-],
-    formatters={
-        '@names' : 'printf',
-    },)
+    ## Rendering the plot
+    source = ColumnDataSource(data=dict(names = list(query.Description),
+                                        opg=query.oppgain,
+                                        pci=query.pci,
+                                        dist=query.distance))
 
-p = figure(plot_width = 600,
-           plot_height = 600,
-           tools=['pan', hover, 'zoom_out', 'zoom_in', 'reset'])
+    hover = HoverTool(tooltips=[("Desc", "@names"),
+                                ("PCI", "$x"),
+                                ("Oppgain", "$y"),
+                                ("Distance", "@dist")],
+                      formatters={'@names' : 'printf',})
 
-p.scatter(x = 'pci',
-          y = 'opg',
-          size = 15,
-          color = 'indigo',
-          alpha = 0.6,
-          source = source)
+    p = figure(plot_width = 600,
+               plot_height = 600,
+               tools=['pan', hover, 'zoom_out', 'zoom_in', 'reset'])
 
-p.xaxis.axis_label = 'Product Complexity Index'
-p.yaxis.axis_label = 'Opportunity Gain'
+    p.scatter(x = 'pci',
+              y = 'opg',
+              size = 15,
+              color = 'indigo',
+              alpha = 0.6,
+              source = source)
+
+    p.xaxis.axis_label = 'Product Complexity Index'
+    p.yaxis.axis_label = 'Opportunity Gain'
+
+    script, div = components(p)
+    plot_title = "AEC: 'Product Complexity Index' and 'Opportunity Gain' for Indonesia, 2016."
+
+    return render_template("chart.html", plot_title=plot_title, the_div=div, the_script=script)
 
 ## Plot 1
 # The graph can help users to identify opportunities for production within a country.
@@ -136,7 +141,7 @@ p.yaxis.axis_label = 'Opportunity Gain'
 #
 # Accordingly, the graph can help users to see those product types which are easy to produce, not produced within the country but can lead to novel valuable skills and know-how.
 
-show(p)
+app.run(port=33507)
 
 ## Second part
 # Loading the data
