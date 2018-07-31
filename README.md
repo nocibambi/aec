@@ -1,7 +1,4 @@
 # Project proposal: Atlas of Economic Complexity
-* [1st Plot](https://floating-shore-10682.herokuapp.com/)
-* [2nd Plot](https://nbviewer.jupyter.org/github/nocibambi/aec/blob/master/2nd%20plot.ipynb)
-
 ## Motivation
 Economic trade and technological development are perhaps the most robust causes of socio-economic dynamics and the global distribution, organization and movement of commodities, technologies and productibility power. Businesses, especially if they intend to sustain and grow in the long term and especially on the global level, can make good use of this kind of information (see the 'Business uses' section below).
 
@@ -98,7 +95,8 @@ The research group behind the Atlas published the cleaned data set only relative
 - Governmental and international institutions interested in trade and economic policy and technological trends.
 
 # Plots
-## Plot1
+## [1st Plot](https://floating-shore-10682.herokuapp.com/)
+
 The graph helps users to identify production opportunities within a country.
 
 It shows the 30 least 'distant' but yet not produced products in a country (in this case, Indonesia). That is, starting to produce them would be relatively easy (in relation to the whole product universe), but nonetheless, the country is not an 'effective' exporter of them.
@@ -112,7 +110,7 @@ Accordingly, the graph can help users to see those product types which are
 2. not produced within the country and
 3. can lead to novel valuable skills and know-how.
 
-## Plot2
+## [2nd Plot](https://nbviewer.jupyter.org/github/nocibambi/aec/blob/master/2nd%20plot.ipynb)
 The graph shows the correlations from different countries between overal imports within a significatn product group.
 
 For this, first we identified those products which
