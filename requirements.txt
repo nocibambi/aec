@@ -1,3 +1,4 @@
+python>=3.8.11 
 gunicorn
 pandas
 bokeh
